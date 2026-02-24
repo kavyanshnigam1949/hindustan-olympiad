@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hindustan Olympiad AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="splash" class="screen active">
+        <h1>Hindustan Olympiad</h1>
+        <p>AI-Powered Excellence</p>
+        <button onclick="showScreen('auth')">Login / Signup</button>
+    </div>
+
+    <div id="auth" class="screen">
+        <h2>Welcome</h2>
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <button onclick="showScreen('home')">Enter Dashboard</button>
+    </div>
+
+    <div id="home" class="screen">
+        <h2>Select Your Class (1-12)</h2>
+        <div id="class-grid" class="grid"></div>
+    </div>
+
+    <div id="stream-select" class="screen">
+        <h2>Select Your Stream</h2>
+        <button onclick="startExam('Science')">Science</button>
+        <button onclick="startExam('Commerce')">Commerce</button>
+        <button onclick="startExam('Humanities')">Humanities</button>
+    </div>
+
+    <div id="exam" class="screen">
+        <div id="timer">Time Remaining: 02:00:00</div>
+        <div id="question-container">Loading AI Questions...</div>
+        <button id="ai-chat-btn" onclick="askAI()">Ask AI for Help</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
